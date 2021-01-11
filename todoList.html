@@ -1,0 +1,128 @@
+<html>
+<center>
+  <head>
+     <title>TO DO LIST</title>
+     <script>
+       var list = [];
+       var i = 0;
+       var verticalList = "";
+
+       function storeItems()
+       {
+  //       list[i] = document.getElementById("items").value;
+  //       i = i + 1;
+
+          var num = 1;
+
+         for(var i=0; i<list.length; i++)
+         {
+           verticalList = verticalList + num + " : " list[i] + "<br>";
+           num++;
+         }
+         document.getElementById("table").innerHTML = verticalList;
+       }
+
+       function printItems()
+       {
+         document.getElementById("table").innerHTML = list;
+       }
+
+       function clearItems()
+       {
+         i = 0;
+         list = [];
+         document.getElementById("table").innerHTML = "";
+       }
+     </script>
+
+     <style>
+        /*Put some style in here*/
+        h1{
+          border: 5px solid yellow;
+          border-style: outset;
+          border-radius: 10px;
+          animation: mymove 5s infinite;
+          background: orange;
+          font-size: 60px;
+          font-family: sans-serif;
+          margin: 20px 400px;
+        }
+
+        @keyframes mymove {
+          from {top: 0px; background-color: orange;}
+          to {top: 200px; background-color: tomato;}
+          50% {color: black;}
+        }
+
+        body{
+          font-family: sans-serif;
+          background-image: url(https://img.freepik.com/free-photo/wooden-floor-sunny-day_1134-28.jpg?size=626&ext=jpg);
+          background-size: cover;
+        }
+
+        p{
+          font-size: 20px;
+        }
+
+        #items{
+          height:35px;
+          font-size:14pt;
+        }
+
+        #add:hover{
+          background-color: red;
+          color: cyan;
+          border-radius: 5px;
+          border: 2px solid purple;
+          font-size: 20px;
+        }
+
+        #clear:hover{
+          background-color: brown;
+          color: yellow;
+          border-radius: 5px;
+          border: 2px solid gray;
+          font-size: 20px;
+        }
+
+        #print:hover{
+          background-color: lightgreen;
+          color: magenta;
+          border-radius: 5px;
+          border: 2px solid lightblue;
+          font-size: 20px;
+        }
+
+        #add{
+          font-size: 20px;
+        }
+
+        #clear{
+          font-size: 20px;
+        }
+
+        #print{
+          font-size: 20px;
+        }
+
+        #table{
+          font-size: 30px;
+          color: black;
+        }
+
+
+     </style>
+  </head>
+  <body>
+    <br>
+    <h1>TO DO LIST</h1>
+    <p>Type a todo list item in the text box below:</p>   <br>
+    <input type = "text" id = "items">
+    <input id="add" type =  "button" value = "Add" onclick = "storeItems()">
+    <input id="clear" type =  "button" value = "Clear Items" onclick = "clearItems()">
+    <input id="print" type =  "button" value = "Display" onclick = "printItems()">
+    <br><br><hr><br><br><br>
+    <span id = "table"></span>
+  </body>
+</center>
+</html>
