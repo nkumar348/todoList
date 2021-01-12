@@ -9,15 +9,15 @@
 
        function storeItems()
        {
-  //       list[i] = document.getElementById("items").value;
-  //       i = i + 1;
+         list[i] = document.getElementById("items").value;
+         i = i + 1;
 
-          var num = 1;
+//          var num = 1;
 
-         for(var i=0; i<list.length; i++)
+//         for(var i=0; i<list.length; i++)
          {
-           verticalList = verticalList + num + " : " list[i] + "<br>";
-           num++;
+//           verticalList = verticalList + num + " : " list[i] + "<br>";
+//           num++;
          }
          document.getElementById("table").innerHTML = verticalList;
        }
@@ -56,8 +56,9 @@
 
         body{
           font-family: sans-serif;
-          background-image: url(https://img.freepik.com/free-photo/wooden-floor-sunny-day_1134-28.jpg?size=626&ext=jpg);
+          background-image: url(https://digitalsynopsis.com/wp-content/uploads/2019/02/gradients-for-photoshop-background-ui-ibiza-sunset.jpg);
           background-size: cover;
+          color: white;
         }
 
         p{
@@ -107,7 +108,7 @@
 
         #table{
           font-size: 30px;
-          color: black;
+          color: white;
         }
 
 
@@ -116,7 +117,7 @@
   <body>
     <br>
     <h1>TO DO LIST</h1>
-    <p>Type a todo list item in the text box below:</p>   <br>
+    <p>Type an item on your to do list in the text box below:</p>   <br>
     <input type = "text" id = "items">
     <input id="add" type =  "button" value = "Add" onclick = "storeItems()">
     <input id="clear" type =  "button" value = "Clear Items" onclick = "clearItems()">
